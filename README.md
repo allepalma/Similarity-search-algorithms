@@ -11,6 +11,8 @@ The constraint of the project implementation are:
 As already mentioned in the introductory section, the dataset we adopted is a downsized version of the one employed originally in the Netflix Challenge. Users were preliminary filtered by removing those who rated less than 300 and more than 3000 movies. The resulting data was collected into a single array object with entries of the form <userID, movieID, rating> containing a total of 65,225,506 records. The IDs are sequences of integers from 1 to the number of users/movies in incremental orders without gaps. In particular, ratings concerning 17,770 movies provided by 103,703 users were present in the dataset. The pool of data we considered was extremely sparse, meaning
 that the majority of entries were zero values. Indeed, if we imagine our data represented as a movie x user matrix, 17,770 x 103,703 total entries would be ideally observable. Out of these possible rating slots, only 65,225,506 are occupied, hence approximately the 3.54%. 
 
+The dataset can be downloaded at https://drive.google.com/file/d/1Fqcyu9g6DZyYK_1qmjEgD1LlGD7Wfs5G/view?usp=sharing.
+
 ## The creation of a signature matrix
 The first step for the approximate isolation of similar pairs is the conversion of the data matrix into a signature matrix. The signature matrix represents the same amount of objects as the original dataset through much shorter vectors. The scope of the signature matrix is to compress the representation of objects in a way that their pairwise similarity is asymptotically preserved, *i.e* similar objects are similar also in the signature representation. The approach for the creation of the signature differs between Jaccard similarity and Cosine similarity. 
  ### Minhashing
