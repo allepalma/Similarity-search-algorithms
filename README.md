@@ -29,7 +29,7 @@ are dealing with a movie x user data matrix. Minhashing is realized by first com
 ### Random projections
 The cosine similarity measures the similarity between two vectors as the extent to which they point in the same direction. It does this by first quantifying the cosine of the angle between them. Then, when the cosine is calculated, the angle can be computed through the arc-cosine of the cosine measure obtained, which outputs the angle of the two vectors. Mathematically, given two vectors p1 and p2, the cosine similarity can be calculated by first finding the cosine of the two vectors with <img src="https://render.githubusercontent.com/render/math?math=\frac{p_1 \dot p_2}{||p_1|| \dot ||p_2||}">. After computing the cosine, we retrieve the angle through:
 <img src="https://render.githubusercontent.com/render/math?math=arccos(\theta)">
-and then get the similarity by: <img src="https://render.githubusercontent.com/render/math?math=cosine\_similarity(p1; p2) = 1 - \frac{\theta}{180}">.
+and then get the similarity by: <img src="https://render.githubusercontent.com/render/math?math=cosine\_similarity(p1 , p2) = 1 - \frac{\theta}{180}">.
 
 
 Just like the Jaccard similarity, we implement a hashing algorithm to compress the highly-dimensional vectors of users which is called cosine
